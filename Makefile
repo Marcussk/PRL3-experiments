@@ -4,9 +4,6 @@
 
 iterations=20
 
-gzip:
-	zip $(ARCHIVENAME).zip $(ALLFILES)
-
 test:
 	./testexp.sh $(iterations) > experimentsResults.csv
 	python parseResults.py experimentsResults.csv $(iterations) > parsedResults.csv
